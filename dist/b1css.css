@@ -1,0 +1,829 @@
+/* =====================================
+   B1CSS - কাস্টম প্রপার্টিজ (ভেরিয়েবল)
+   ===================================== */
+
+:root {
+  /* স্পেসিং স্কেল */
+  --b1-space-0: 0;
+  --b1-space-1: 0.25rem;  /* 4px */
+  --b1-space-2: 0.5rem;   /* 8px */
+  --b1-space-3: 1rem;     /* 16px */
+  --b1-space-4: 1.5rem;   /* 24px */
+  --b1-space-5: 2rem;     /* 32px */
+  --b1-space-6: 3rem;     /* 48px */
+  --b1-space-8: 4rem;     /* 64px */
+  
+  /* টাইপোগ্রাফি */
+  --b1-font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --b1-font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  
+  --b1-text-xs: 0.75rem;   /* 12px */
+  --b1-text-sm: 0.875rem;  /* 14px */
+  --b1-text-base: 1rem;    /* 16px */
+  --b1-text-lg: 1.125rem;  /* 18px */
+  --b1-text-xl: 1.25rem;   /* 20px */
+  --b1-text-2xl: 1.5rem;   /* 24px */
+  --b1-text-3xl: 1.875rem; /* 30px */
+  --b1-text-4xl: 2.25rem;  /* 36px */
+  
+  /* কালার প্যালেট */
+  --b1-primary: #2563eb;
+  --b1-primary-dark: #1d4ed8;
+  --b1-primary-light: #60a5fa;
+  
+  --b1-secondary: #6b7280;
+  --b1-secondary-dark: #4b5563;
+  --b1-secondary-light: #9ca3af;
+  
+  --b1-success: #16a34a;
+  --b1-success-dark: #15803d;
+  --b1-success-light: #4ade80;
+  
+  --b1-danger: #dc2626;
+  --b1-danger-dark: #b91c1c;
+  --b1-danger-light: #f87171;
+  
+  --b1-warning: #f59e0b;
+  --b1-warning-dark: #d97706;
+  --b1-warning-light: #fbbf24;
+  
+  --b1-info: #0891b2;
+  --b1-white: #ffffff;
+  --b1-black: #0f172a;
+  --b1-gray-50: #f9fafb;
+  --b1-gray-100: #f3f4f6;
+  --b1-gray-200: #e5e7eb;
+  --b1-gray-300: #d1d5db;
+  --b1-gray-400: #9ca3af;
+  --b1-gray-500: #6b7280;
+  --b1-gray-600: #4b5563;
+  --b1-gray-700: #374151;
+  --b1-gray-800: #1f2937;
+  --b1-gray-900: #111827;
+  
+  /* বর্ডার */
+  --b1-border-radius: 0.375rem;
+  --b1-border-radius-lg: 0.5rem;
+  --b1-border-radius-xl: 0.75rem;
+  --b1-border-radius-full: 9999px;
+  
+  /* শ্যাডো */
+  --b1-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --b1-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --b1-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --b1-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --b1-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  
+  /* ব্রেকপয়েন্ট */
+  --b1-breakpoint-sm: 640px;
+  --b1-breakpoint-md: 768px;
+  --b1-breakpoint-lg: 1024px;
+  --b1-breakpoint-xl: 1280px;
+  --b1-breakpoint-2xl: 1536px;
+  
+  /* জটিল সেটিংস */
+  --b1-transition: all 0.2s ease;
+  --b1-container-padding: 1rem;
+  --b1-font-family: var(--b1-font-sans);
+}/* =====================================
+   B1CSS - মডার্ন CSS রিসেট
+   ===================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: var(--b1-gray-200);
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-family: var(--b1-font-family);
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}
+
+body {
+  margin: 0;
+  line-height: inherit;
+  color: var(--b1-gray-900);
+  background-color: var(--b1-white);
+}
+
+hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp, pre {
+  font-family: var(--b1-font-mono);
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, [type='button'], [type='reset'], [type='submit'] {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+
+:-moz-focusring {
+  outline: auto;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+summary {
+  display: list-item;
+}
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol, ul, menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::placeholder, textarea::placeholder {
+  opacity: 1;
+  color: var(--b1-gray-400);
+}
+
+button, [role="button"] {
+  cursor: pointer;
+}
+
+:disabled {
+  cursor: default;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+[hidden] {
+  display: none;
+}/* =====================================
+   B1CSS - ইউটিলিটি ক্লাস
+   ===================================== */
+
+/* স্পেসিং ইউটিলিটিস */
+.m-0 { margin: var(--b1-space-0); }
+.m-1 { margin: var(--b1-space-1); }
+.m-2 { margin: var(--b1-space-2); }
+.m-3 { margin: var(--b1-space-3); }
+.m-4 { margin: var(--b1-space-4); }
+.m-5 { margin: var(--b1-space-5); }
+.m-6 { margin: var(--b1-space-6); }
+.m-8 { margin: var(--b1-space-8); }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+.my-auto { margin-top: auto; margin-bottom: auto; }
+
+.mt-0 { margin-top: var(--b1-space-0); }
+.mt-1 { margin-top: var(--b1-space-1); }
+.mt-2 { margin-top: var(--b1-space-2); }
+.mt-3 { margin-top: var(--b1-space-3); }
+.mt-4 { margin-top: var(--b1-space-4); }
+.mt-5 { margin-top: var(--b1-space-5); }
+.mt-6 { margin-top: var(--b1-space-6); }
+.mt-8 { margin-top: var(--b1-space-8); }
+
+.mb-0 { margin-bottom: var(--b1-space-0); }
+.mb-1 { margin-bottom: var(--b1-space-1); }
+.mb-2 { margin-bottom: var(--b1-space-2); }
+.mb-3 { margin-bottom: var(--b1-space-3); }
+.mb-4 { margin-bottom: var(--b1-space-4); }
+.mb-5 { margin-bottom: var(--b1-space-5); }
+.mb-6 { margin-bottom: var(--b1-space-6); }
+.mb-8 { margin-bottom: var(--b1-space-8); }
+
+.ml-0 { margin-left: var(--b1-space-0); }
+.ml-1 { margin-left: var(--b1-space-1); }
+.ml-2 { margin-left: var(--b1-space-2); }
+.ml-3 { margin-left: var(--b1-space-3); }
+.ml-4 { margin-left: var(--b1-space-4); }
+.ml-5 { margin-left: var(--b1-space-5); }
+.ml-6 { margin-left: var(--b1-space-6); }
+.ml-8 { margin-left: var(--b1-space-8); }
+
+.mr-0 { margin-right: var(--b1-space-0); }
+.mr-1 { margin-right: var(--b1-space-1); }
+.mr-2 { margin-right: var(--b1-space-2); }
+.mr-3 { margin-right: var(--b1-space-3); }
+.mr-4 { margin-right: var(--b1-space-4); }
+.mr-5 { margin-right: var(--b1-space-5); }
+.mr-6 { margin-right: var(--b1-space-6); }
+.mr-8 { margin-right: var(--b1-space-8); }
+
+.p-0 { padding: var(--b1-space-0); }
+.p-1 { padding: var(--b1-space-1); }
+.p-2 { padding: var(--b1-space-2); }
+.p-3 { padding: var(--b1-space-3); }
+.p-4 { padding: var(--b1-space-4); }
+.p-5 { padding: var(--b1-space-5); }
+.p-6 { padding: var(--b1-space-6); }
+.p-8 { padding: var(--b1-space-8); }
+
+.pt-0 { padding-top: var(--b1-space-0); }
+.pt-1 { padding-top: var(--b1-space-1); }
+.pt-2 { padding-top: var(--b1-space-2); }
+.pt-3 { padding-top: var(--b1-space-3); }
+.pt-4 { padding-top: var(--b1-space-4); }
+.pt-5 { padding-top: var(--b1-space-5); }
+.pt-6 { padding-top: var(--b1-space-6); }
+.pt-8 { padding-top: var(--b1-space-8); }
+
+.pb-0 { padding-bottom: var(--b1-space-0); }
+.pb-1 { padding-bottom: var(--b1-space-1); }
+.pb-2 { padding-bottom: var(--b1-space-2); }
+.pb-3 { padding-bottom: var(--b1-space-3); }
+.pb-4 { padding-bottom: var(--b1-space-4); }
+.pb-5 { padding-bottom: var(--b1-space-5); }
+.pb-6 { padding-bottom: var(--b1-space-6); }
+.pb-8 { padding-bottom: var(--b1-space-8); }
+
+.pl-0 { padding-left: var(--b1-space-0); }
+.pl-1 { padding-left: var(--b1-space-1); }
+.pl-2 { padding-left: var(--b1-space-2); }
+.pl-3 { padding-left: var(--b1-space-3); }
+.pl-4 { padding-left: var(--b1-space-4); }
+.pl-5 { padding-left: var(--b1-space-5); }
+.pl-6 { padding-left: var(--b1-space-6); }
+.pl-8 { padding-left: var(--b1-space-8); }
+
+.pr-0 { padding-right: var(--b1-space-0); }
+.pr-1 { padding-right: var(--b1-space-1); }
+.pr-2 { padding-right: var(--b1-space-2); }
+.pr-3 { padding-right: var(--b1-space-3); }
+.pr-4 { padding-right: var(--b1-space-4); }
+.pr-5 { padding-right: var(--b1-space-5); }
+.pr-6 { padding-right: var(--b1-space-6); }
+.pr-8 { padding-right: var(--b1-space-8); }
+
+/* ডিসপ্লে */
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+.hidden { display: none; }
+
+/* ফ্লেক্সবক্স */
+.flex-row { flex-direction: row; }
+.flex-row-reverse { flex-direction: row-reverse; }
+.flex-col { flex-direction: column; }
+.flex-col-reverse { flex-direction: column-reverse; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.items-center { align-items: center; }
+.items-baseline { align-items: baseline; }
+.items-stretch { align-items: stretch; }
+
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-evenly { justify-content: space-evenly; }
+
+.flex-1 { flex: 1 1 0%; }
+.flex-auto { flex: 1 1 auto; }
+.flex-initial { flex: 0 1 auto; }
+.flex-none { flex: none; }
+
+.gap-1 { gap: var(--b1-space-1); }
+.gap-2 { gap: var(--b1-space-2); }
+.gap-3 { gap: var(--b1-space-3); }
+.gap-4 { gap: var(--b1-space-4); }
+.gap-5 { gap: var(--b1-space-5); }
+
+/* টাইপোগ্রাফি */
+.text-xs { font-size: var(--b1-text-xs); }
+.text-sm { font-size: var(--b1-text-sm); }
+.text-base { font-size: var(--b1-text-base); }
+.text-lg { font-size: var(--b1-text-lg); }
+.text-xl { font-size: var(--b1-text-xl); }
+.text-2xl { font-size: var(--b1-text-2xl); }
+.text-3xl { font-size: var(--b1-text-3xl); }
+.text-4xl { font-size: var(--b1-text-4xl); }
+
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* কালার ইউটিলিটিস */
+.text-primary { color: var(--b1-primary); }
+.text-secondary { color: var(--b1-secondary); }
+.text-success { color: var(--b1-success); }
+.text-danger { color: var(--b1-danger); }
+.text-warning { color: var(--b1-warning); }
+.text-white { color: var(--b1-white); }
+.text-black { color: var(--b1-black); }
+
+.bg-primary { background-color: var(--b1-primary); }
+.bg-secondary { background-color: var(--b1-secondary); }
+.bg-success { background-color: var(--b1-success); }
+.bg-danger { background-color: var(--b1-danger); }
+.bg-warning { background-color: var(--b1-warning); }
+.bg-white { background-color: var(--b1-white); }
+.bg-gray-50 { background-color: var(--b1-gray-50); }
+.bg-gray-100 { background-color: var(--b1-gray-100); }
+.bg-gray-200 { background-color: var(--b1-gray-200); }
+.bg-gray-300 { background-color: var(--b1-gray-300); }
+.bg-gray-400 { background-color: var(--b1-gray-400); }
+.bg-gray-500 { background-color: var(--b1-gray-500); }
+.bg-gray-600 { background-color: var(--b1-gray-600); }
+.bg-gray-700 { background-color: var(--b1-gray-700); }
+.bg-gray-800 { background-color: var(--b1-gray-800); }
+.bg-gray-900 { background-color: var(--b1-gray-900); }
+
+/* বর্ডার */
+.border { border-width: 1px; }
+.border-2 { border-width: 2px; }
+.border-4 { border-width: 4px; }
+.border-0 { border-width: 0; }
+
+.border-primary { border-color: var(--b1-primary); }
+.border-gray-200 { border-color: var(--b1-gray-200); }
+
+.rounded { border-radius: var(--b1-border-radius); }
+.rounded-lg { border-radius: var(--b1-border-radius-lg); }
+.rounded-xl { border-radius: var(--b1-border-radius-xl); }
+.rounded-full { border-radius: var(--b1-border-radius-full); }
+
+/* সাইজিং */
+.w-full { width: 100%; }
+.w-screen { width: 100vw; }
+.w-auto { width: auto; }
+.h-full { height: 100%; }
+.h-screen { height: 100vh; }
+.h-auto { height: auto; }
+
+/* পজিশনিং */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+/* শ্যাডো */
+.shadow-sm { box-shadow: var(--b1-shadow-sm); }
+.shadow { box-shadow: var(--b1-shadow); }
+.shadow-md { box-shadow: var(--b1-shadow-md); }
+.shadow-lg { box-shadow: var(--b1-shadow-lg); }
+.shadow-xl { box-shadow: var(--b1-shadow-xl); }
+
+/* হোভার ইফেক্টস */
+.hover\:bg-primary-dark:hover { background-color: var(--b1-primary-dark); }
+.hover\:text-white:hover { color: var(--b1-white); }
+.hover\:shadow-lg:hover { box-shadow: var(--b1-shadow-lg); }
+
+/* ফোকাস স্টেটস */
+.focus\:outline-none:focus { outline: none; }
+.focus\:ring-2:focus { ring: 2px solid var(--b1-primary); }
+
+/* ট্রানজিশন */
+.transition { transition: var(--b1-transition); }
+.transition-all { transition: all 0.2s ease; }
+
+/* জটিল ইউটিলিটিস */
+.cursor-pointer { cursor: pointer; }
+.opacity-0 { opacity: 0; }
+.opacity-50 { opacity: 0.5; }
+.opacity-100 { opacity: 1; }
+
+.overflow-hidden { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+.overflow-scroll { overflow: scroll; }
+
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-30 { z-index: 30; }
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }/* =====================================
+   B1CSS - কম্পোনেন্ট ক্লাস
+   ===================================== */
+
+/* বাটন কম্পোনেন্ট */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: var(--b1-text-base);
+  font-weight: 500;
+  line-height: 1.5;
+  border-radius: var(--b1-border-radius);
+  transition: var(--b1-transition);
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--b1-primary);
+  color: var(--b1-white);
+}
+.btn-primary:hover {
+  background-color: var(--b1-primary-dark);
+}
+
+.btn-secondary {
+  background-color: var(--b1-secondary);
+  color: var(--b1-white);
+}
+.btn-secondary:hover {
+  background-color: var(--b1-secondary-dark);
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border-color: var(--b1-primary);
+  color: var(--b1-primary);
+}
+.btn-outline-primary:hover {
+  background-color: var(--b1-primary);
+  color: var(--b1-white);
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: var(--b1-text-sm);
+}
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--b1-text-lg);
+}
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* কার্ড কম্পোনেন্ট */
+.card {
+  background-color: var(--b1-white);
+  border-radius: var(--b1-border-radius-lg);
+  box-shadow: var(--b1-shadow);
+  overflow: hidden;
+  transition: var(--b1-transition);
+}
+.card:hover {
+  box-shadow: var(--b1-shadow-lg);
+}
+.card-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--b1-gray-200);
+  background-color: var(--b1-gray-50);
+  font-weight: 600;
+}
+.card-body {
+  padding: 1.5rem;
+}
+.card-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--b1-gray-200);
+  background-color: var(--b1-gray-50);
+}
+.card-title {
+  font-size: var(--b1-text-xl);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.card-text {
+  color: var(--b1-gray-600);
+  line-height: 1.6;
+}
+
+/* ফর্ম এলিমেন্টস */
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--b1-gray-700);
+}
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: var(--b1-text-base);
+  line-height: 1.5;
+  color: var(--b1-gray-900);
+  background-color: var(--b1-white);
+  border: 1px solid var(--b1-gray-300);
+  border-radius: var(--b1-border-radius);
+  transition: var(--b1-transition);
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--b1-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+.form-input.error {
+  border-color: var(--b1-danger);
+}
+.form-error {
+  color: var(--b1-danger);
+  font-size: var(--b1-text-sm);
+  margin-top: 0.25rem;
+}
+
+/* অ্যালার্ট কম্পোনেন্ট */
+.alert {
+  padding: 1rem;
+  border-radius: var(--b1-border-radius);
+  border: 1px solid transparent;
+  margin-bottom: 1rem;
+}
+.alert-primary {
+  background-color: #dbeafe;
+  border-color: #bfdbfe;
+  color: #1e40af;
+}
+.alert-success {
+  background-color: #dcfce7;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+.alert-danger {
+  background-color: #fee2e2;
+  border-color: #fecaca;
+  color: #991b1b;
+}
+.alert-warning {
+  background-color: #fef3c7;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+/* ব্যাজ কম্পোনেন্ট */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: var(--b1-text-xs);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--b1-border-radius-full);
+}
+.badge-primary {
+  background-color: var(--b1-primary);
+  color: var(--b1-white);
+}
+.badge-success {
+  background-color: var(--b1-success);
+  color: var(--b1-white);
+}
+.badge-warning {
+  background-color: var(--b1-warning);
+  color: var(--b1-white);
+}
+
+/* নেভিগেশন */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--b1-white);
+  box-shadow: var(--b1-shadow-sm);
+}
+.navbar-brand {
+  font-size: var(--b1-text-xl);
+  font-weight: 700;
+  color: var(--b1-primary);
+}
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav-link {
+  color: var(--b1-gray-600);
+  text-decoration: none;
+  transition: var(--b1-transition);
+}
+.nav-link:hover {
+  color: var(--b1-primary);
+}/* =====================================
+   B1CSS - রেস্পন্সিভ গ্রিড সিস্টেম
+   ===================================== */
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--b1-container-padding);
+  padding-left: var(--b1-container-padding);
+}
+
+@media (min-width: 640px) {
+  .container { max-width: 640px; }
+}
+@media (min-width: 768px) {
+  .container { max-width: 768px; }
+}
+@media (min-width: 1024px) {
+  .container { max-width: 1024px; }
+}
+@media (min-width: 1280px) {
+  .container { max-width: 1280px; }
+}
+@media (min-width: 1536px) {
+  .container { max-width: 1536px; }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(var(--b1-space-3) * -1);
+  margin-left: calc(var(--b1-space-3) * -1);
+}
+
+.col {
+  flex: 1 0 0%;
+  padding-right: var(--b1-space-3);
+  padding-left: var(--b1-space-3);
+}
+
+.col-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+.col-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+.col-3 { flex: 0 0 25%; max-width: 25%; }
+.col-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+.col-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+.col-6 { flex: 0 0 50%; max-width: 50%; }
+.col-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+.col-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+.col-9 { flex: 0 0 75%; max-width: 75%; }
+.col-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+.col-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+.col-12 { flex: 0 0 100%; max-width: 100%; }
+
+@media (min-width: 640px) {
+  .col-sm-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-sm-12 { flex: 0 0 100%; max-width: 100%; }
+}
+
+@media (min-width: 768px) {
+  .col-md-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-md-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+}
+
+@media (min-width: 1024px) {
+  .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-lg-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .col-lg-6 { flex: 0 0 50%; max-width: 50%; }
+}
+
+.gap-0 { gap: 0; }
+.gap-1 { gap: var(--b1-space-1); }
+.gap-2 { gap: var(--b1-space-2); }
+.gap-3 { gap: var(--b1-space-3); }
+.gap-4 { gap: var(--b1-space-4); }
+.gap-5 { gap: var(--b1-space-5); }/* =====================================
+   B1CSS - হেল্পার ক্লাস
+   ===================================== */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

@@ -1,0 +1,40 @@
+{
+  "name": "b1css",
+  "version": "1.0.0",
+  "description": "B1CSS - একটি শক্তিশালী Utility-first CSS ফ্রেমওয়ার্ক",
+  "main": "dist/b1css.css",
+  "style": "dist/b1css.css",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+  "build": "npm run build:css && npm run build:minify",
+  "build:css": "type src\\_variables.css src\\_reset.css src\\_utilities.css src\\_components.css src\\_grid.css src\\_helpers.css > dist\\b1css.css",
+  "build:minify": "cleancss -o dist\\b1css.min.css dist\\b1css.css",
+  "watch": "nodemon -e css -x \"npm run build\"",
+  "prepublishOnly": "npm run build"
+   },
+  "keywords": [
+    "css",
+    "framework",
+    "utility-first",
+    "b1css",
+    "bangladesh"
+  ],
+  "author": "PixelPulse Innovations",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "nodemon": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/animelife2o/b1css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/animelife2o/b1css/issues"
+  },
+  "homepage": "https://github.com/animelife2o/b1css#readme",
+  "type": "commonjs"
+}

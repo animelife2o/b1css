@@ -1,0 +1,250 @@
+/* =====================================
+   B1CSS - ইউটিলিটি ক্লাস
+   ===================================== */
+
+/* স্পেসিং ইউটিলিটিস */
+.m-0 { margin: var(--b1-space-0); }
+.m-1 { margin: var(--b1-space-1); }
+.m-2 { margin: var(--b1-space-2); }
+.m-3 { margin: var(--b1-space-3); }
+.m-4 { margin: var(--b1-space-4); }
+.m-5 { margin: var(--b1-space-5); }
+.m-6 { margin: var(--b1-space-6); }
+.m-8 { margin: var(--b1-space-8); }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+.my-auto { margin-top: auto; margin-bottom: auto; }
+
+.mt-0 { margin-top: var(--b1-space-0); }
+.mt-1 { margin-top: var(--b1-space-1); }
+.mt-2 { margin-top: var(--b1-space-2); }
+.mt-3 { margin-top: var(--b1-space-3); }
+.mt-4 { margin-top: var(--b1-space-4); }
+.mt-5 { margin-top: var(--b1-space-5); }
+.mt-6 { margin-top: var(--b1-space-6); }
+.mt-8 { margin-top: var(--b1-space-8); }
+
+.mb-0 { margin-bottom: var(--b1-space-0); }
+.mb-1 { margin-bottom: var(--b1-space-1); }
+.mb-2 { margin-bottom: var(--b1-space-2); }
+.mb-3 { margin-bottom: var(--b1-space-3); }
+.mb-4 { margin-bottom: var(--b1-space-4); }
+.mb-5 { margin-bottom: var(--b1-space-5); }
+.mb-6 { margin-bottom: var(--b1-space-6); }
+.mb-8 { margin-bottom: var(--b1-space-8); }
+
+.ml-0 { margin-left: var(--b1-space-0); }
+.ml-1 { margin-left: var(--b1-space-1); }
+.ml-2 { margin-left: var(--b1-space-2); }
+.ml-3 { margin-left: var(--b1-space-3); }
+.ml-4 { margin-left: var(--b1-space-4); }
+.ml-5 { margin-left: var(--b1-space-5); }
+.ml-6 { margin-left: var(--b1-space-6); }
+.ml-8 { margin-left: var(--b1-space-8); }
+
+.mr-0 { margin-right: var(--b1-space-0); }
+.mr-1 { margin-right: var(--b1-space-1); }
+.mr-2 { margin-right: var(--b1-space-2); }
+.mr-3 { margin-right: var(--b1-space-3); }
+.mr-4 { margin-right: var(--b1-space-4); }
+.mr-5 { margin-right: var(--b1-space-5); }
+.mr-6 { margin-right: var(--b1-space-6); }
+.mr-8 { margin-right: var(--b1-space-8); }
+
+.p-0 { padding: var(--b1-space-0); }
+.p-1 { padding: var(--b1-space-1); }
+.p-2 { padding: var(--b1-space-2); }
+.p-3 { padding: var(--b1-space-3); }
+.p-4 { padding: var(--b1-space-4); }
+.p-5 { padding: var(--b1-space-5); }
+.p-6 { padding: var(--b1-space-6); }
+.p-8 { padding: var(--b1-space-8); }
+
+.pt-0 { padding-top: var(--b1-space-0); }
+.pt-1 { padding-top: var(--b1-space-1); }
+.pt-2 { padding-top: var(--b1-space-2); }
+.pt-3 { padding-top: var(--b1-space-3); }
+.pt-4 { padding-top: var(--b1-space-4); }
+.pt-5 { padding-top: var(--b1-space-5); }
+.pt-6 { padding-top: var(--b1-space-6); }
+.pt-8 { padding-top: var(--b1-space-8); }
+
+.pb-0 { padding-bottom: var(--b1-space-0); }
+.pb-1 { padding-bottom: var(--b1-space-1); }
+.pb-2 { padding-bottom: var(--b1-space-2); }
+.pb-3 { padding-bottom: var(--b1-space-3); }
+.pb-4 { padding-bottom: var(--b1-space-4); }
+.pb-5 { padding-bottom: var(--b1-space-5); }
+.pb-6 { padding-bottom: var(--b1-space-6); }
+.pb-8 { padding-bottom: var(--b1-space-8); }
+
+.pl-0 { padding-left: var(--b1-space-0); }
+.pl-1 { padding-left: var(--b1-space-1); }
+.pl-2 { padding-left: var(--b1-space-2); }
+.pl-3 { padding-left: var(--b1-space-3); }
+.pl-4 { padding-left: var(--b1-space-4); }
+.pl-5 { padding-left: var(--b1-space-5); }
+.pl-6 { padding-left: var(--b1-space-6); }
+.pl-8 { padding-left: var(--b1-space-8); }
+
+.pr-0 { padding-right: var(--b1-space-0); }
+.pr-1 { padding-right: var(--b1-space-1); }
+.pr-2 { padding-right: var(--b1-space-2); }
+.pr-3 { padding-right: var(--b1-space-3); }
+.pr-4 { padding-right: var(--b1-space-4); }
+.pr-5 { padding-right: var(--b1-space-5); }
+.pr-6 { padding-right: var(--b1-space-6); }
+.pr-8 { padding-right: var(--b1-space-8); }
+
+/* ডিসপ্লে */
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+.hidden { display: none; }
+
+/* ফ্লেক্সবক্স */
+.flex-row { flex-direction: row; }
+.flex-row-reverse { flex-direction: row-reverse; }
+.flex-col { flex-direction: column; }
+.flex-col-reverse { flex-direction: column-reverse; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.items-center { align-items: center; }
+.items-baseline { align-items: baseline; }
+.items-stretch { align-items: stretch; }
+
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-evenly { justify-content: space-evenly; }
+
+.flex-1 { flex: 1 1 0%; }
+.flex-auto { flex: 1 1 auto; }
+.flex-initial { flex: 0 1 auto; }
+.flex-none { flex: none; }
+
+.gap-1 { gap: var(--b1-space-1); }
+.gap-2 { gap: var(--b1-space-2); }
+.gap-3 { gap: var(--b1-space-3); }
+.gap-4 { gap: var(--b1-space-4); }
+.gap-5 { gap: var(--b1-space-5); }
+
+/* টাইপোগ্রাফি */
+.text-xs { font-size: var(--b1-text-xs); }
+.text-sm { font-size: var(--b1-text-sm); }
+.text-base { font-size: var(--b1-text-base); }
+.text-lg { font-size: var(--b1-text-lg); }
+.text-xl { font-size: var(--b1-text-xl); }
+.text-2xl { font-size: var(--b1-text-2xl); }
+.text-3xl { font-size: var(--b1-text-3xl); }
+.text-4xl { font-size: var(--b1-text-4xl); }
+
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* কালার ইউটিলিটিস */
+.text-primary { color: var(--b1-primary); }
+.text-secondary { color: var(--b1-secondary); }
+.text-success { color: var(--b1-success); }
+.text-danger { color: var(--b1-danger); }
+.text-warning { color: var(--b1-warning); }
+.text-white { color: var(--b1-white); }
+.text-black { color: var(--b1-black); }
+
+.bg-primary { background-color: var(--b1-primary); }
+.bg-secondary { background-color: var(--b1-secondary); }
+.bg-success { background-color: var(--b1-success); }
+.bg-danger { background-color: var(--b1-danger); }
+.bg-warning { background-color: var(--b1-warning); }
+.bg-white { background-color: var(--b1-white); }
+.bg-gray-50 { background-color: var(--b1-gray-50); }
+.bg-gray-100 { background-color: var(--b1-gray-100); }
+.bg-gray-200 { background-color: var(--b1-gray-200); }
+.bg-gray-300 { background-color: var(--b1-gray-300); }
+.bg-gray-400 { background-color: var(--b1-gray-400); }
+.bg-gray-500 { background-color: var(--b1-gray-500); }
+.bg-gray-600 { background-color: var(--b1-gray-600); }
+.bg-gray-700 { background-color: var(--b1-gray-700); }
+.bg-gray-800 { background-color: var(--b1-gray-800); }
+.bg-gray-900 { background-color: var(--b1-gray-900); }
+
+/* বর্ডার */
+.border { border-width: 1px; }
+.border-2 { border-width: 2px; }
+.border-4 { border-width: 4px; }
+.border-0 { border-width: 0; }
+
+.border-primary { border-color: var(--b1-primary); }
+.border-gray-200 { border-color: var(--b1-gray-200); }
+
+.rounded { border-radius: var(--b1-border-radius); }
+.rounded-lg { border-radius: var(--b1-border-radius-lg); }
+.rounded-xl { border-radius: var(--b1-border-radius-xl); }
+.rounded-full { border-radius: var(--b1-border-radius-full); }
+
+/* সাইজিং */
+.w-full { width: 100%; }
+.w-screen { width: 100vw; }
+.w-auto { width: auto; }
+.h-full { height: 100%; }
+.h-screen { height: 100vh; }
+.h-auto { height: auto; }
+
+/* পজিশনিং */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+/* শ্যাডো */
+.shadow-sm { box-shadow: var(--b1-shadow-sm); }
+.shadow { box-shadow: var(--b1-shadow); }
+.shadow-md { box-shadow: var(--b1-shadow-md); }
+.shadow-lg { box-shadow: var(--b1-shadow-lg); }
+.shadow-xl { box-shadow: var(--b1-shadow-xl); }
+
+/* হোভার ইফেক্টস */
+.hover\:bg-primary-dark:hover { background-color: var(--b1-primary-dark); }
+.hover\:text-white:hover { color: var(--b1-white); }
+.hover\:shadow-lg:hover { box-shadow: var(--b1-shadow-lg); }
+
+/* ফোকাস স্টেটস */
+.focus\:outline-none:focus { outline: none; }
+.focus\:ring-2:focus { ring: 2px solid var(--b1-primary); }
+
+/* ট্রানজিশন */
+.transition { transition: var(--b1-transition); }
+.transition-all { transition: all 0.2s ease; }
+
+/* জটিল ইউটিলিটিস */
+.cursor-pointer { cursor: pointer; }
+.opacity-0 { opacity: 0; }
+.opacity-50 { opacity: 0.5; }
+.opacity-100 { opacity: 1; }
+
+.overflow-hidden { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+.overflow-scroll { overflow: scroll; }
+
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-30 { z-index: 30; }
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
