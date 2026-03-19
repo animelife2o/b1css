@@ -11,4 +11,9 @@ B1CSS একটি Utility-first ও Component-based হাইব্রিড CS
 - জিরো ডিপেন্ডেন্সি
 
 ## 📦 ইনস্টলেশন
+cnd 
+https://cdn.jsdelivr.net/gh/animelife2o/b1css@v1.0.0/dist/b1css.min.css
+
+docs 
+https://b1css.page.gd
 
